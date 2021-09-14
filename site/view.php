@@ -18,15 +18,15 @@
             <div id="image">
 				<p><?=$images['likes']?>,    creator: <?=$images['creator_name']?><p>
              	<img src="../uploads/<?=$images['image_url']?>" alt='IMAGE' width="200" height="200">
-				 <form action="index.php"
+				 <form action="like.php"
            				method="post"
            				enctype="multipart/form-data">
 
-           		    <input type="submit" 
-                  	name=<?=$images['creator_name']?>
-                  	value="Like">
-					  <br>
+           		    
 					
+					<button name="submit" value=<?=$images['id']?> type="submit">Like</button>
+					<br>
+
 
      				</form>
 

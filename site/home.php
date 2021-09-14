@@ -31,11 +31,8 @@
 
 
     </form>
-    <div id="view"></div>
-
-
+    <div id="view">    <?php include('view.php'); ?>
+</div>
 </body>
 </html>
-
-<?php include_once ('view.php');
 

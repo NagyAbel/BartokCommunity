@@ -1,6 +1,8 @@
 
+
 var autoLoad = setInterval(
-    function ()
-    {
+   function update ()
+   {    
        $('#view').load('view.php');
     }, 10000);
+
