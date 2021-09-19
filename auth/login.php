@@ -4,9 +4,19 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: ../site/home.php");
+    if($_SESSION['username'] == "admin")
+    {
+
+        header("location: ../site/admin.php");
+
+    }else
+    {
+        header("location: ../site/home.php");
+
+    }
+
     exit;
-}
+}else 
  
 // Include config file
 require_once "../config.php";
@@ -64,7 +74,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: ../site/home.php");
+                            if($_SESSION["username"] == "admin")
+                            {
+                                header("location: ../site/admin.php");
+
+                            }else
+                            {
+                                header("location: ../site/home.php");
+
+                            }
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";

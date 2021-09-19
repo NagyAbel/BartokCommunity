@@ -1,16 +1,10 @@
-<?php
-    session_start();
-    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-        header("location: login.php");
-        exit;
-    }else if($_SESSION["username"]=="admin")
-    {
-        header("location: admin.php");
 
-    }
+
+<?php 
+    session_start();
+    include '../config.php';
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +17,7 @@
     </style>
 </head>
 <body>
-    <h1 class="my-5">Hello there, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+    <h1 class="my-5"> ADMIN PAGE</h1>
     <p>
         <a href="../auth/logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
     </p>
@@ -35,8 +29,24 @@
 
 
     </form>
-    <div id="view">    <?php include('view.php'); ?>
 </div>
 </body>
 </html>
-
+    
+<?php
+    if(isset($_SESSION["loggedin"]))
+    {
+        $username = $_SESSION['username']; 
+        if(!$username == "admin")
+        {
+            echo('You are not an admin');
+        }else
+        {
+            include('admin_view.php');
+        }
+        
+    }else
+    {
+        echo('You are not logged in');
+    }
+    ?>

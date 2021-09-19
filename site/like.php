@@ -9,23 +9,18 @@ if(isset($_POST['submit']))
     $can_like  =TRUE;
     $sql = "SELECT likes FROM images WHERE id = '$img_id'";
     $res =  mysqli_query($link,$sql);
-   //$likes = mysqli_fetch_assoc($res)['likes'];
     $likes = mysqli_fetch_assoc($res)['likes'] + 1;
+    
     $username = $_SESSION['username'];
-    $sql = "SELECT  liked_image_id FROM liked_images WHERE liker_name = '$username'";
+    echo($username);
+    $sql = "SELECT  id FROM liked_images WHERE liker_name = '$username' AND  liked_image_id='$img_id'";
     $res = mysqli_query($link,$sql);
-    $i = 0;
-    $list = mysqli_fetch_array($res);
+    $list = mysqli_fetch_assoc($res);
     if(!is_null($list))
     {
-        while($i < count($list))
-        {
-            if($list[$i] == $img_id)
-            {
-                $can_like = FALSE;
-            }
-            $i++;
-        }
+
+        $can_like = FALSE;
+        
     }
  
    
@@ -35,6 +30,16 @@ if(isset($_POST['submit']))
     {
         $sql = "INSERT INTO liked_images(liker_name, liked_image_id)
         VALUES('$username','$img_id')";    
+        mysqli_query($link,$sql);
+
+        $sql = "UPDATE images SET likes = '$likes' WHERE id = '$img_id'";
+        mysqli_query($link,$sql);
+
+
+    }else
+    {
+        $likes = $likes - 2;
+        $sql = "DELETE FROM liked_images WHERE liker_name = '$username' and  liked_image_id = '$img_id'";
         mysqli_query($link,$sql);
 
         $sql = "UPDATE images SET likes = '$likes' WHERE id = '$img_id'";
