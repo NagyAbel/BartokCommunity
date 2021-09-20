@@ -1,4 +1,5 @@
 <?php
+	include "../config.php";
     session_start();
     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         header("location: login.php");
@@ -8,6 +9,12 @@
         header("location: admin.php");
 
     }
+	$username = $_SESSION["username"];
+	$sql = "SELECT image_url FROM users WHERE username='$username'";
+    $res = mysqli_query($link,  $sql);
+
+	$picture = mysqli_fetch_assoc($res)
+	
 
 ?>
 
@@ -23,10 +30,13 @@
     </style>
 </head>
 <body>
+          <img src="../profile_pictures/<?=$picture['image_url']?>" alt='IMAGE' width="200" height="200">
+
     <h1 class="my-5">Hello there, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
     <p>
         <a href="../auth/logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
     </p>
+	
 
     <form action = "upload.php" , method  = "post" , enctype="multipart/form-data">
 

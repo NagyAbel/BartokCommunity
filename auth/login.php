@@ -80,7 +80,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                             }else
                             {
-                                header("location: ../site/home.php");
+								$sql = "SELECT image_url FROM users WHERE username='$username'";
+								$res = mysqli_query($link,$sql);
+								$asd = mysqli_fetch_assoc($res);
+								
+								if($asd["image_url"] == "")
+								{
+									header("location: profile_view.php");
+								}else
+								{
+									  header("location: ../site/home.php");
+
+								}
 
                             }
                         } else{

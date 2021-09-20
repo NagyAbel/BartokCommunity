@@ -3,7 +3,7 @@
 
 <body>
      <?php 
-        include "../config.php";
+        @include "../config.php";
 		@session_start();
 
 		$username = $_SESSION['username'];
