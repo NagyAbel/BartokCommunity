@@ -5,6 +5,10 @@ define('DB_SERVER', '92.205.15.237');
 define('DB_USERNAME', 'tln8laqut2kv');
 define('DB_PASSWORD', '}FQ1eH;o53n-');
 define('DB_NAME', 'pixelgram');
+
+
+
+
 //define('DB_SERVER', 'localhost');
 //define('DB_USERNAME', 'root');
 //define('DB_PASSWORD', '');

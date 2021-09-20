@@ -67,11 +67,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password,join_date) VALUES (?, ?,?)";
-         $join_date = date('y-m-d');
+        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_password,$join_date);
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
             
             // Set parameters
             $param_username = $username;
@@ -100,37 +100,104 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+        @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+        @font-face {
+            font-family: 'fffforward';
+            src: url('../static/fonts/fffforward.TTF') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .wrapper{ 
+            width: 30%;
+            position: absolute;
+            left: 35%;
+            top: 35%; 
+            text-align: center;
+            height: 450px;
+            font-family: 'Staatliches', cursive;
+        }
+
+        .text {
+            text-align: center;
+            background: #2C2B2B;
+            margin-top: 30px;
+            width: 90%;
+            height: 60px;
+            border-radius: 1000px;
+            font-size: 40px;
+            border: none;
+            box-shadow: 2px 2px 3px #1c1b1b;
+            font-family: 'Staatliches', cursive;
+            transition: 0.4s ease-in-out;
+            color: #979797;
+            letter-spacing: 1px;
+        }
+
+        .text:focus {
+            outline: none;
+            width: 93%;
+        }
+
+        .button {
+            position: absolute;
+            left: 25%;
+            top: 78%;
+            width: 50%;
+            background: #2C2B2B;
+            border: none;
+            border-radius: 1000px;
+            height: 50px;
+            font-family: 'Staatliches', cursive;
+            color: #979797;
+            font-size: 30px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .button:hover {
+            box-shadow: 3px 3px 4px #1c1b1b;
+            width: 55%;
+            height: 52px;
+            left: 22.5%;
+            font-size: 33px;
+        }
+
+        .textsugi{
+            position: absolute;
+            top: 100%;
+            left: 15%;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 25px;
+            width: 70%;
+            text-align: center;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        .title2 {
+            text-align: center;
+            margin-top: 10%;
+            font-size: 60px;
+            font-family: 'fffforward';
+            color: #D4D7DF;
+        }
+        body{
+            background: #2C3034;
+        }
     </style>
 </head>
 <body>
+    <p class="title2" >PixelGram</p>
     <div class="wrapper">
-        <h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                <span class="invalid-feedback"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
-                <span class="invalid-feedback"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
-                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-secondary ml-2" value="Reset">
-            </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+                <input type="text" name="username" placeholder="username" class="text <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <input type="password" name="password" placeholder="password" class="text <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+                <input type="password" name="confirm_password" placeholder="confirm password" class="text <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
+                <input type="submit" class="button" value="Sign Up">
+            <p class="textsugi">Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
     </div>    
 </body>

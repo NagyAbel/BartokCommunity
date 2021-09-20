@@ -40,7 +40,7 @@
 
 
 <!-- YOUR UPLOADS DIV START -->
-<div class="your_uploads">
+<div class="your_uploads" >
 	<h1>Your Uploads</h1>
 
 		<?php
@@ -103,6 +103,7 @@
 
 			  <style>
 			.your_uploads{
+				
 				float:right;
 		}
 		.most_liked{
