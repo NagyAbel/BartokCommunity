@@ -1,0 +1,61 @@
+[10-Oct-2021 17:18:29 UTC] PHP Warning:  unlink(../uploads/IMG-6161ea4466f097.41249403.jpeg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[10-Oct-2021 17:18:31 UTC] PHP Warning:  unlink(../uploads/IMG-6161ea3c54c451.67038464.png): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[10-Oct-2021 17:18:32 UTC] PHP Warning:  unlink(../uploads/IMG-6161ea334bfe33.14842670.png): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[10-Oct-2021 17:18:48 UTC] PHP Warning:  unlink(../uploads/IMG-6162cae641a553.64477259.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[10-Oct-2021 17:18:49 UTC] PHP Warning:  unlink(../uploads/IMG-6162a76e5dd599.18221634.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[10-Oct-2021 17:18:51 UTC] PHP Warning:  unlink(../uploads/IMG-6161f1971f37a4.17344712.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[10-Oct-2021 17:18:56 UTC] PHP Warning:  unlink(../uploads/IMG-6161cdb72459f1.79280159.jpeg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[10-Oct-2021 20:31:12 UTC] PHP Warning:  Undefined array key "username" in /home/tln8laqut2kv/public_html/site/utils/upload.php on line 9
+[11-Oct-2021 05:08:56 UTC] PHP Warning:  unlink(../uploads/IMG-616352a7771974.37308559.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 07:50:07 UTC] PHP Warning:  include(ImageResize.php): Failed to open stream: No such file or directory in /home/tln8laqut2kv/public_html/site/utils/upload.php on line 2
+[11-Oct-2021 07:50:07 UTC] PHP Warning:  include(): Failed opening 'ImageResize.php' for inclusion (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tln8laqut2kv/public_html/site/utils/upload.php on line 2
+[11-Oct-2021 07:50:07 UTC] PHP Fatal error:  Uncaught Error: Class "Gumlet\ImageResize" not found in /home/tln8laqut2kv/public_html/site/utils/upload.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/tln8laqut2kv/public_html/site/utils/upload.php on line 33
+[11-Oct-2021 13:34:39 UTC] PHP Warning:  unlink(IMG-616324d28376d8.61801773.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 13:34:42 UTC] PHP Warning:  unlink(IMG-616324d770dd75.95718841.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 13:34:46 UTC] PHP Warning:  unlink(IMG-6163205b716e82.36320042.png): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 13:34:49 UTC] PHP Warning:  unlink(IMG-6163214e62d662.88127134.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 13:34:51 UTC] PHP Warning:  unlink(IMG-6163214edaa814.10880371.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 13:34:54 UTC] PHP Warning:  unlink(IMG-6163225a0e24b3.72654418.png): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 13:34:55 UTC] PHP Warning:  unlink(IMG-6163226e463b62.25968244.png): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 13:34:57 UTC] PHP Warning:  unlink(IMG-61634d901aec04.33466288.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 13:34:59 UTC] PHP Warning:  unlink(IMG-616350e3c51014.83804453.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 13:54:46 UTC] PHP Warning:  unlink(../uploads/IMG-616442156b5949.80130717.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 14:41:20 UTC] PHP Warning:  unlink(../uploads/IMG-61644d0da50446.59165509.png): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 14:43:27 UTC] PHP Warning:  unlink(../uploads/IMG-61644d6e171972.88531794.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 14:45:44 UTC] PHP Warning:  unlink(../uploads/IMG-61644dec0a08b7.12749779.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 14:45:46 UTC] PHP Warning:  unlink(../uploads/IMG-61644da27c5cb2.88401537.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 14:51:46 UTC] PHP Warning:  unlink(../uploads/IMG-61644f4e8dbb61.61123882.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 14:51:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 13
+[11-Oct-2021 14:51:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 14
+[11-Oct-2021 14:54:06 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/tln8laqut2kv/public_html/site/utils/upload.php:14
+Stack trace:
+#0 /home/tln8laqut2kv/public_html/site/utils/upload.php(14): getimagesize()
+#1 {main}
+  thrown in /home/tln8laqut2kv/public_html/site/utils/upload.php on line 14
+[11-Oct-2021 14:54:11 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/tln8laqut2kv/public_html/site/utils/upload.php:14
+Stack trace:
+#0 /home/tln8laqut2kv/public_html/site/utils/upload.php(14): getimagesize()
+#1 {main}
+  thrown in /home/tln8laqut2kv/public_html/site/utils/upload.php on line 14
+[11-Oct-2021 14:58:21 UTC] PHP Warning:  unlink(../uploads/IMG-6164507a3663d4.86831966.png): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 14:58:22 UTC] PHP Warning:  unlink(../uploads/IMG-61644f90d6aa53.36532099.png): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 16:18:36 UTC] PHP Warning:  unlink(../uploads/IMG-616463d623d221.88203120.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 16:19:53 UTC] PHP Warning:  unlink(../uploads/IMG-61646423453311.06297004.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 16:20:54 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/tln8laqut2kv/public_html/site/utils/upload.php:14
+Stack trace:
+#0 /home/tln8laqut2kv/public_html/site/utils/upload.php(14): getimagesize()
+#1 {main}
+  thrown in /home/tln8laqut2kv/public_html/site/utils/upload.php on line 14
+[11-Oct-2021 16:21:04 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/tln8laqut2kv/public_html/site/utils/upload.php:14
+Stack trace:
+#0 /home/tln8laqut2kv/public_html/site/utils/upload.php(14): getimagesize()
+#1 {main}
+  thrown in /home/tln8laqut2kv/public_html/site/utils/upload.php on line 14
+[11-Oct-2021 16:24:34 UTC] PHP Warning:  unlink(../uploads/IMG-616465397bca09.54798534.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 16:24:40 UTC] PHP Warning:  unlink(../uploads/IMG-616464b2e9c1b4.89359898.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 16:25:19 UTC] PHP Warning:  Undefined array key "username" in /home/tln8laqut2kv/public_html/site/utils/upload.php on line 15
+[11-Oct-2021 16:26:56 UTC] PHP Warning:  unlink(../uploads/IMG-6164658367a1a1.83684852.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19
+[11-Oct-2021 16:27:21 UTC] PHP Warning:  unlink(../uploads/IMG-616465c213b9a6.56016406.jpg): No such file or directory in /home/tln8laqut2kv/public_html/site/utils/remove_post.php on line 19

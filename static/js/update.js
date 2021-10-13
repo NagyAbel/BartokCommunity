@@ -3,6 +3,6 @@
 var autoLoad = setInterval(
    function update ()
    {    
-       $('#view').load('view.php');
+      // $('#view').load('../../site/home/view.php');
     }, 10000);
 

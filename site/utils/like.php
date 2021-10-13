@@ -1,18 +1,18 @@
 <?php
 
-include '../config.php';
-if(isset($_POST['submit']))
+include '../../config.php';
+if(isset($_POST['image_id']))
 {
     session_start();
+    header('Content-Type: application/json; charset=utf-8');
 
-    $img_id = $_POST['submit'];
+    $img_id = $_POST['image_id'];
     $can_like  =TRUE;
     $sql = "SELECT likes FROM images WHERE id = '$img_id'";
     $res =  mysqli_query($link,$sql);
     $likes = mysqli_fetch_assoc($res)['likes'] + 1;
     
     $username = $_SESSION['username'];
-    echo($username);
     $sql = "SELECT  id FROM liked_images WHERE liker_name = '$username' AND  liked_image_id='$img_id'";
     $res = mysqli_query($link,$sql);
     $list = mysqli_fetch_assoc($res);
@@ -22,8 +22,6 @@ if(isset($_POST['submit']))
         $can_like = FALSE;
         
     }
- 
-   
 
 
     if($can_like)
@@ -34,7 +32,10 @@ if(isset($_POST['submit']))
 
         $sql = "UPDATE images SET likes = '$likes' WHERE id = '$img_id'";
         mysqli_query($link,$sql);
-
+        $data = array($img_id,strval($likes));
+        $JSON_DATA = json_encode($data);
+    
+        echo($JSON_DATA);
 
     }else
     {
@@ -44,10 +45,14 @@ if(isset($_POST['submit']))
 
         $sql = "UPDATE images SET likes = '$likes' WHERE id = '$img_id'";
         mysqli_query($link,$sql);
+        $data = array($img_id,strval($likes));
+        $JSON_DATA = json_encode($data);
+    
+        echo($JSON_DATA);
 
 
     }
-    header('Location: home.php');
+    //header('Location: home.php');
 }
 
 ?>

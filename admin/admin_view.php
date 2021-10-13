@@ -32,7 +32,7 @@
             <div id="image">
 				<p><?=$images['likes']?>,    creator: <?=$images['creator_name']?><p>
              	<img src="../uploads/<?=$images['image_url']?>" alt='IMAGE' width="200" height="200">
-				 <form action="remove_post.php"
+				 <form action="../site/utils/remove_post.php"
            				method="post"
            				enctype="multipart/form-data">	
 					<button name="submit" value=<?=$images['id']?> type="submit">Remove</button>

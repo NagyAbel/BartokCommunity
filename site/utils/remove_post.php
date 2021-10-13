@@ -1,6 +1,6 @@
 <?php 
 
-include '../config.php';
+include '../../config.php';
 if(isset($_POST['submit']))
 {
     session_start();
@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
         $sql = "DELETE FROM liked_images where liked_image_id = '$img_id'";
         $res = mysqli_query($link,$sql);
       
-        header('location: home.php');
+        header('location: ../home/home.php');
 
     }else
     {

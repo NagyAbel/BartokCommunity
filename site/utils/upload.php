@@ -1,20 +1,21 @@
 <?php
-include '../site/utils/ImageResize.php';
+include 'ImageResize.php';
 use  \Gumlet\ImageResize;
 session_start();
-include "../config.php";
+include "../../config.php";
 
- if(isset($_POST['submit']))
+ if(isset($_POST['submit']) and isset($_SESSION['loggedin']))
  {
      $filename = $_FILES['my_image']['name'];
      $temp_name = $_FILES['my_image']['tmp_name'];
      $filesize = $_FILES['my_image']['size'];
-    $uploaddir = "../profile_pictures/";
+    $uploaddir = "../../uploads/";
     $targetfile = $uploaddir.$filename;
     $details = getImageSize($_FILES['my_image']['tmp_name']);
-    $username = $_SESSION['username'];
-    $max_resolution = 100;
-
+    $img_creator = $_SESSION['username'];
+    $img_likes = 0;
+    $date = date('y-m-d');
+    $max_resolution = 400;
      if($filesize > 0 and $filesize < 50000000)
      {
          
@@ -46,30 +47,32 @@ include "../config.php";
                 echo('SUCCES');
                 unlink("$targetfile");
                 
-                $sql = "UPDATE users  SET  image_url = '$resizeimage' WHERE username ='$username'";
-                mysqli_query($link,$sql);
-                header("Location: ../site/home/home.php");
+    
+                $sql = "INSERT INTO images(creator_name,created_date,image_url,likes)
+                     VALUES('$img_creator','$date','$resizeimage','$img_likes')";
+                    mysqli_query($link,$sql);
+                    header("Location: ../home/home.php");
     
             }else
             {
-            $em = "Hiba történt !";
+            $em = "unknown error occurred!";
             $_SESSION['em'] = $em;
-            header("Location: ../site/utils/error.php");
+            header("Location: error.php");
             }
     
         }else
         {
-            $em = "Nem lehet ilyen tipusu adatot feltőlteni!";
+            $em = "You can't upload files of this type";
             $_SESSION['em'] = $em;
-            header("Location: ../site/utils/error.php");
+            header("Location: error.php");
          }
 
     }else
      {
         $em = "Bocsi, túl nagy a kép.";
         $_SESSION["em"] = $em;
-        header("Location: ../site/utils/error.php");
-    }
+        header("Location: error.php ");
+     }
  }
 
 

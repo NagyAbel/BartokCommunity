@@ -1,0 +1,106 @@
+
+.bg {
+    animation:slide 2s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #48575e    50%, #2d4a1a 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:3s;
+  }
+  
+  .bg3 {
+    animation-duration:4s;
+  }
+  
+  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+.rolunk_border {
+    width: 400px;
+    height: 550px;
+    background: #2C2B2B;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -275px;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.rolunk_text{
+  color:white;
+  text-align: center;
+  font-size: 20px;
+  padding-top:10px;
+}
+.rolunk_title{
+  color:white;
+  text-align:center;
+}
+
+
+.rolunk_border2 {
+  width: 400px;
+  height: 550px;
+  background: #2C2B2B;
+  border-radius: 20px;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -275px;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 0.5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.rolunk_text2{
+color:white;
+text-align: center;
+font-size: 20px;
+padding-top:10px;
+}
+.rolunk_title2{
+color:white;
+text-align:center;
+}
+
+
+.back {
+  color: white;
+  position: absolute;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  background: #5c5c5c;
+  bottom: 5%;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 0.5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}

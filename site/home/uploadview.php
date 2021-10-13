@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/background.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/background.css"/>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
@@ -57,13 +57,12 @@
             color: white;
             position: absolute;
             left: 50%;
-            width: 300px;
-            margin-left: -150px;
+            width: 150px;
+            margin-left: -75px;
             background: #5c5c5c;
             top: 5%;
             border-radius: 20px;
             cursor: pointer;
-            font-size:20px;
             font-family: 'Staatliches', cursive;
             letter-spacing: 0.5px;
         }
@@ -185,10 +184,10 @@
 </head>
 <body>
     <div class="general">
-        <form action = "profile_upload.php" , method  = "post" , enctype="multipart/form-data">
+        <form action = "../utils/upload.php" , method  = "post" , enctype="multipart/form-data">
 
 
-        <label for="file-upload" class="text"><p class="atter">Válassz ki egy profil képet</p></label>
+        <label for="file-upload" class="text"><p class="atter">kép kiválasztása</p></label>
             <input id="file-upload" style="display: none;" accept="image/*" onchange="loadFile(event)" type="file", name="my_image">
             <img id="output" class="img"/>
                 <script>
@@ -201,11 +200,12 @@
                 };
                 </script>
            
-            <input class="button" type="submit" name="submit" value="Feltöltés" />
+            <input class="button" type="submit" name="submit"  value="Feltöltés" />
             
         </form>
     </div>
-    <?php include('../site/home/background.html'); ?>
+    <?php include('background.html'); ?>
 
+    <a class="back" href="home.php">Vissza</a>
 </body>
 </html>
